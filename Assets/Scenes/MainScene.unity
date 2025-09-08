@@ -546,7 +546,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -564,7 +564,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.65
+  m_fontSize: 69.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -682,7 +682,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -700,7 +700,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.65
+  m_fontSize: 69.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -885,7 +885,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 61.15
+  m_fontSize: 72
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1048,10 +1048,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2133698342}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.6843741, y: 0.4272058}
+  m_AnchorMin: {x: 1, y: 0.32000002}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000030517578, y: 0}
-  m_SizeDelta: {x: -0.54519653, y: -1.6439362}
+  m_AnchoredPosition: {x: -0.000091552734, y: 0}
+  m_SizeDelta: {x: 211.6423, y: -0.35769653}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1002170878
 MonoBehaviour:
@@ -1312,10 +1312,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1995492019}
+      - m_Target: {fileID: 1955137583}
         m_TargetAssemblyTypeName: "\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430\u0421\u0446\u0435\u043D\u044B,
           Assembly-CSharp"
-        m_MethodName: LoadScene
+        m_MethodName: "\u041F\u0435\u0440\u0435\u043A\u043B\u044E\u0447\u0438\u0442\u044C\u0421\u0446\u0435\u043D\u0443\u0410\u043B\u0438\u043D\u0445\u0440\u043E\u043D\u043D\u043E"
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1373,6 +1373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1955137581}
   - component: {fileID: 1955137582}
+  - component: {fileID: 1955137583}
   m_Layer: 5
   m_Name: "\u041E\u043A\u043D\u043E\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0438"
   m_TagString: Untagged
@@ -1423,6 +1424,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1955137583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955137580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 475f08ff982a1a84091cd8dd9379891c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  componentAnimator: {fileID: 1955137582}
+  "Text\u041F\u0440\u043E\u0433\u0440\u0435\u0441\u0430\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0438": {fileID: 757338089}
+  "\u041F\u0440\u043E\u0433\u0440\u0435\u0441\u0411\u0430\u0440\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0438": {fileID: 1002170878}
 --- !u!1 &1961528736
 GameObject:
   m_ObjectHideFlags: 0
@@ -1467,7 +1483,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961528736}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1507,7 +1523,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1995492020}
-  - component: {fileID: 1995492019}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1515,20 +1530,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1995492019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1995492018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 475f08ff982a1a84091cd8dd9379891c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LoadSceneName: SceneLevel1
-  MenuSceneName: MainScene
 --- !u!4 &1995492020
 Transform:
   m_ObjectHideFlags: 0
