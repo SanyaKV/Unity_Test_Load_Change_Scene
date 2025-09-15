@@ -9,6 +9,7 @@ public class ЗагрузкаСцены : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI TextПрогресаЗагрузки;
     [SerializeField] private Image ПрогресБарЗагрузки;
+    [SerializeField] private string MainSceneName;
 
     private AsyncOperation asyncOperation_ПрогрессЗагрузки;
 
@@ -22,7 +23,7 @@ public class ЗагрузкаСцены : MonoBehaviour
         if (componentAnimator == null)
             componentAnimator = GetComponent<Animator>();
         if (ИгратьАнимациюПроявленияПриВыводеСцены)
-        {
+        {//Для сцены в которую загрузились
             ИгратьАнимациюПроявленияПриВыводеСцены = false;
             Instance.componentAnimator.SetTrigger(name: "ЗагрузкаСцены_Конец");
         }
@@ -35,16 +36,19 @@ public class ЗагрузкаСцены : MonoBehaviour
             float progress = asyncOperation_ПрогрессЗагрузки.progress;
             if (asyncOperation_ПрогрессЗагрузки.isDone || progress >= 0.9f)
                 progress = 1;
-            load_progress_cur = Mathf.Lerp(load_progress_cur, progress, Time.deltaTime * 3);
+            load_progress_cur = Mathf.Lerp(load_progress_cur, progress, Time.deltaTime * 1);
 
-            TextПрогресаЗагрузки.text = Mathf.RoundToInt(load_progress_cur * 100) + "%";
+            int progress_proc = Mathf.RoundToInt(load_progress_cur * 100);
+
+            TextПрогресаЗагрузки.text = progress_proc + "%";
             ПрогресБарЗагрузки.fillAmount = load_progress_cur;
-            if (load_progress_cur >= 0.9f)
+            if (progress_proc >= 100)
             {
+                Debug.Log("ЗагрузкаСцены = Ок");
                 asyncOperation_ПрогрессЗагрузки.allowSceneActivation = true;
                 ИгратьАнимациюПроявленияПриВыводеСцены = true;
             }
-            Debug.Log("ЗагрузкаСцены = "+ progress + "%");
+            Debug.Log("ЗагрузкаСцены = "+ progress + "%"+" /"+ load_progress_cur);
         }
         else
         {
@@ -53,27 +57,26 @@ public class ЗагрузкаСцены : MonoBehaviour
             load_progress_cur = 0f;
         }
     }
+    public  void ПереключитьСценуАлинхронноДомой() => ПереключитьСценуАлинхронно(MainSceneName);
     public static void ПереключитьСценуАлинхронно(string sceneName)
     {
         Instance.componentAnimator.SetTrigger(name: "ЗагрузкаСцены_Начало");//Установить тригер запуска анимации затемнения экрана
         ПереключаемаяСцена = sceneName;
 
-        //Instance.asyncOperation_ПрогрессЗагрузки =  SceneManager.LoadSceneAsync(sceneName);
-        //Instance.asyncOperation_ПрогрессЗагрузки.allowSceneActivation = false; //После загрузки сцены сразу на неё не переключаться
+        Instance.asyncOperation_ПрогрессЗагрузки =  SceneManager.LoadSceneAsync(sceneName);
+        Instance.asyncOperation_ПрогрессЗагрузки.allowSceneActivation = false; //После загрузки сцены сразу на неё не переключаться
         
     }
     //Вызывается когда закончилась анимация появления окна загрузки
-    public void OnAnimatorOver()
+    public void АнимацияНачалаЗагрузкиКончилась()
     {
-        asyncOperation_ПрогрессЗагрузки = SceneManager.LoadSceneAsync(ПереключаемаяСцена);
-        Debug.Log("ЗагрузкаСцены = " + asyncOperation_ПрогрессЗагрузки.progress + "%");
-        asyncOperation_ПрогрессЗагрузки.allowSceneActivation = false; //После загрузки сцены сразу на неё не переключаться
+        //asyncOperation_ПрогрессЗагрузки = SceneManager.LoadSceneAsync(ПереключаемаяСцена);
+        //asyncOperation_ПрогрессЗагрузки.allowSceneActivation = false; //После загрузки сцены сразу на неё не переключаться
+
+        //Debug.Log("ЗагрузкаСцены = " + asyncOperation_ПрогрессЗагрузки.progress + "%");
 
         //Instance.asyncOperation_ПрогрессЗагрузки.allowSceneActivation = true;//Разрешить переключение сцены
     }
-
-    public void LoadScene(string sceneName) => SceneManager.LoadScene(sceneName);
-    public void LoadScene(int sceneIndex) => SceneManager.LoadScene(sceneIndex);
 }
 
 
