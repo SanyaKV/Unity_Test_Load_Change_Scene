@@ -57,8 +57,8 @@ public class ЗагрузкаСцены : MonoBehaviour
             load_progress_cur = 0f;
         }
     }
-    public  void ПереключитьСценуАлинхронноДомой() => ПереключитьСценуАлинхронно(MainSceneName);
-    public static void ПереключитьСценуАлинхронно(string sceneName)
+    public  void ПереключитьСценуАcинхронноДомой() => ПереключитьСценуАcинхронно(MainSceneName);
+    public static void ПереключитьСценуАcинхронно(string sceneName)
     {
         Instance.componentAnimator.SetTrigger(name: "ЗагрузкаСцены_Начало");//Установить тригер запуска анимации затемнения экрана
         ПереключаемаяСцена = sceneName;
