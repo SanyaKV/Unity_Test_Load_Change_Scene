@@ -205,7 +205,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1301330988}
         m_TargetAssemblyTypeName: "\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430\u0421\u0446\u0435\u043D\u044B,
           Assembly-CSharp"
-        m_MethodName: "\u041F\u0435\u0440\u0435\u043A\u043B\u044E\u0447\u0438\u0442\u044C\u0421\u0446\u0435\u043D\u0443\u0410\u043B\u0438\u043D\u0445\u0440\u043E\u043D\u043D\u043E"
+        m_MethodName: "\u041F\u0435\u0440\u0435\u043A\u043B\u044E\u0447\u0438\u0442\u044C\u0421\u0446\u0435\u043D\u0443"
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -774,7 +774,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 41.25
+  m_fontSize: 34.2
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -914,6 +914,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 703378010051427954, guid: a058d9a5fc0f732418a5c826670cc818, type: 3}
+      propertyPath: "\u0424\u043E\u043D"
+      value: 
+      objectReference: {fileID: 1923686665}
+    - target: {fileID: 703378010051427954, guid: a058d9a5fc0f732418a5c826670cc818, type: 3}
+      propertyPath: "\u0411\u043B\u043E\u043A\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0438"
+      value: 
+      objectReference: {fileID: 1923686664}
     - target: {fileID: 5936516846435722798, guid: a058d9a5fc0f732418a5c826670cc818, type: 3}
       propertyPath: m_Name
       value: "Canvas\u042D\u043A\u0440\u0430\u043D\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0438"
@@ -923,6 +931,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a058d9a5fc0f732418a5c826670cc818, type: 3}
+--- !u!1 &1923686664 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3204245864694353908, guid: a058d9a5fc0f732418a5c826670cc818, type: 3}
+  m_PrefabInstance: {fileID: 1923686663}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1923686665 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 252631033163178915, guid: a058d9a5fc0f732418a5c826670cc818, type: 3}
+  m_PrefabInstance: {fileID: 1923686663}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

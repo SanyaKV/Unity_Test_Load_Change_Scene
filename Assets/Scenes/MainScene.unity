@@ -612,7 +612,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 61.15
+  m_fontSize: 72
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -865,7 +865,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1955137583}
         m_TargetAssemblyTypeName: "\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430\u0421\u0446\u0435\u043D\u044B,
           Assembly-CSharp"
-        m_MethodName: "\u041F\u0435\u0440\u0435\u043A\u043B\u044E\u0447\u0438\u0442\u044C\u0421\u0446\u0435\u043D\u0443\u0410\u043B\u0438\u043D\u0445\u0440\u043E\u043D\u043D\u043E"
+        m_MethodName: "\u041F\u0435\u0440\u0435\u043A\u043B\u044E\u0447\u0438\u0442\u044C\u0421\u0446\u0435\u043D\u0443"
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -913,6 +913,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490718439}
   m_CullTransparentMesh: 1
+--- !u!1 &1716449456 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 252631033163178915, guid: a058d9a5fc0f732418a5c826670cc818, type: 3}
+  m_PrefabInstance: {fileID: 3348616757415447628}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1955137583 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 703378010051427954, guid: a058d9a5fc0f732418a5c826670cc818, type: 3}
@@ -955,6 +960,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2045569384 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3204245864694353908, guid: a058d9a5fc0f732418a5c826670cc818, type: 3}
+  m_PrefabInstance: {fileID: 3348616757415447628}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3348616757415447628
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1043,6 +1053,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 703378010051427954, guid: a058d9a5fc0f732418a5c826670cc818, type: 3}
+      propertyPath: "\u0424\u043E\u043D"
+      value: 
+      objectReference: {fileID: 1716449456}
+    - target: {fileID: 703378010051427954, guid: a058d9a5fc0f732418a5c826670cc818, type: 3}
+      propertyPath: "\u0411\u043B\u043E\u043A\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0438"
+      value: 
+      objectReference: {fileID: 2045569384}
     - target: {fileID: 5936516846435722798, guid: a058d9a5fc0f732418a5c826670cc818, type: 3}
       propertyPath: m_Name
       value: "Canvas\u042D\u043A\u0440\u0430\u043D\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0438"
