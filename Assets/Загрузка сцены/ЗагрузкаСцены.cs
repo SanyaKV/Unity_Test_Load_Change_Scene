@@ -33,7 +33,6 @@ public class ЗагрузкаСцены : MonoBehaviour
 
     private void Start()
     {
-        Time.timeScale = 0;
         componentAnimator.updateMode = AnimatorUpdateMode.UnscaledTime;
         Instance = this;
         if (componentAnimator == null)
